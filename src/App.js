@@ -1,14 +1,16 @@
 import React from 'react'
 import {
   BrowserRouter as Router,
-  Routes,
-  Route,
   Navigate,
+  Route,
+  Routes,
 } from 'react-router-dom'
-import { PostList } from './features/posts/PostList'
+import { PostsList } from './features/posts/PostsList'
+import { SinglePostPage } from './features/posts/SinglePostPage'
 
 import { Navbar } from './app/Navbar'
 import { AddPostForm } from './features/posts/AddPostForm'
+import { EditPostForm } from './features/posts/EditPostForm'
 
 function App() {
   return (
@@ -21,10 +23,12 @@ function App() {
             element={
               <React.Fragment>
                 <AddPostForm />
-                <PostList />
+                <PostsList />
               </React.Fragment>
             }
-          ></Route>
+          />
+          <Route path="/posts/:postId" element={<SinglePostPage />} />
+          <Route path="/editPost/:postId" element={<EditPostForm />} />
           <Route render={() => <Navigate to="/" />} />
         </Routes>
       </div>
