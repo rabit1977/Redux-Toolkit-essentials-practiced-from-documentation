@@ -33,8 +33,8 @@ export const AddPostForm = () => {
   ))
 
   return (
-    <section>
-      <h2>Add a New Post</h2>
+    <section className="my-4">
+      <h2 className="text-2xl">Add a New Post</h2>
       <form>
         <label htmlFor="postTitle">Post Title:</label>
         <input
@@ -57,7 +57,7 @@ export const AddPostForm = () => {
           value={content}
           onChange={onContentChanged}
         />
-        <button type="button" onClick={onSavePostClicked} disabled={!canSave}>
+        <button className="bg-purple-900 mt-4"type="button" onClick={onSavePostClicked} disabled={!canSave}>
           Save Post
         </button>
       </form>

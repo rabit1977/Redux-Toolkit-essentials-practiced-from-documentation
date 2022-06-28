@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --redux-color: #764abc;
 }
@@ -114,7 +118,7 @@ section h1 {
 
 .post-excerpt {
   padding: 0.25rem 0.25rem;
-  border: 1px solid rgb(177, 174, 174);
+  border: 1px solid #b1aeae;
   border-radius: 7px;
 }
 

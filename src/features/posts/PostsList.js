@@ -16,7 +16,10 @@ export const PostsList = () => {
 
   const renderedPosts = orderedPosts.map((post) => {
     return (
-      <article className="post-excerpt" key={post.id}>
+      <article
+        className="rounded-md border-2 border-solid border-[#b1aeae] my-3 p-1"
+        key={post.id}
+      >
         <h3>{post.title}</h3>
         <div>
           <PostAuthor userId={post.user} />
