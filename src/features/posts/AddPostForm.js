@@ -34,10 +34,13 @@ export const AddPostForm = () => {
 
   return (
     <section className="my-4">
-      <h2 className="text-2xl">Add a New Post</h2>
-      <form>
-        <label htmlFor="postTitle">Post Title:</label>
+      <h2 className="text-2xl ">Add a New Post</h2>
+      <form className="flex flex-col">
+        <label htmlFor="postTitle" className="mt-4 mb-2">
+          Post Title:
+        </label>
         <input
+          className="border-2 border-gray-300 rounded-lg p-2 w-full mb-4"
           type="text"
           id="postTitle"
           name="postTitle"
@@ -45,19 +48,34 @@ export const AddPostForm = () => {
           value={title}
           onChange={onTitleChanged}
         />
-        <label htmlFor="postAuthor">Author:</label>
-        <select id="postAuthor" value={userId} onChange={onAuthorChanged}>
+        <label htmlFor="postAuthor" className="mt-4 mb-2">
+          Author:
+        </label>
+        <select
+          className="border-2 border-gray-300 rounded-lg p-2 w-full mb-4"
+          id="postAuthor"
+          value={userId}
+          onChange={onAuthorChanged}
+        >
           <option value=""></option>
           {usersOptions}
         </select>
-        <label htmlFor="postContent">Content:</label>
+        <label className="mt-4 mb-2" htmlFor="postContent">
+          Content:
+        </label>
         <textarea
+          className="border-2 border-gray-300 rounded-lg p-2 w-full mb-4"
           id="postContent"
           name="postContent"
           value={content}
           onChange={onContentChanged}
         />
-        <button className="bg-purple-900 mt-4"type="button" onClick={onSavePostClicked} disabled={!canSave}>
+        <button
+          className="bg-purple-900 mt-4 border-none text-white font-bold py-2 px-4 rounded disabled:opacity-60 disabled:hover:opacity-60"
+          type="button"
+          onClick={onSavePostClicked}
+          disabled={!canSave}
+        >
           Save Post
         </button>
       </form>

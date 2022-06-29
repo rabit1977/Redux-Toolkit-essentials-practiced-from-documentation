@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Navigate,
   Route,
-  Routes
+  Routes,
 } from 'react-router-dom'
 import { PostsList } from './features/posts/PostsList'
 import { SinglePostPage } from './features/posts/SinglePostPage'
@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div className="App">
+      <div>
         <Routes>
           <Route
             path="/"
