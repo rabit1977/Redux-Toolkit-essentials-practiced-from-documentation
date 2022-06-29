@@ -54,10 +54,10 @@ nav a:first-of-type {
   margin-left: -1.5rem;
 }
 
-nav a:hover {
+/* nav a:hover {
   color: white;
   background: #926bcf;
-}
+} */
 
 .navContent {
   display: flex;
@@ -138,20 +138,19 @@ section h1 {
 p.post-content {
   margin-top: 10px;
 }
-
+/* 
 .button {
   display: inline-block;
-  background: #1976d2;
   color: white;
   border-radius: 4px;
   font-weight: 700;
   padding: 0.75rem 1.5rem;
-}
+} */
 
-button:disabled,
+/* button:disabled,
 button:disabled:hover {
   opacity: 0.5;
-}
+} */
 
 button.reaction-button {
   border: 1px solid #e0e3e9;

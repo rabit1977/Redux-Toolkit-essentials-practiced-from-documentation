@@ -7,9 +7,11 @@ export const Navbar = () => {
       <section>
         <h1>Redux Essentials Example</h1>
 
-        <div className="navContent">
-          <div className="navLinks">
-            <Link to="/">Posts</Link>
+        <div className="flex justify-between ">
+          <div className="flex ml-6 mt-3 ">
+            <Link to="/" className="hover:text-white hover:bg-[#926bcf]">
+              Posts
+            </Link>
           </div>
         </div>
       </section>
